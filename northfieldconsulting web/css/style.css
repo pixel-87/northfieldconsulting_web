@@ -1,0 +1,182 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#main-header{
+    background-color: white;
+    color: rgba(81, 186, 218, 0.671);
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.header-logo{
+    position: top;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+#nav-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#navbar{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    position: fixed; /* Add this line */
+    top: 0; /* Add this line */
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000; /* Ensure the navbar stays above other content */
+    padding: 30px
+}
+
+#navbar ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+#navbar li{
+    margin: 0;
+}
+
+#navbar a{
+    color:#fff;
+    text-decoration: none;    
+    font-size: 18px;
+    padding: 0 15px;
+    display: flex;
+}
+
+#showcase {
+    background-image: url('../images/Logo1.png');
+    background-position: center;
+    min-height: 800px;
+    margin-bottom: 250px;
+    text-align: center;
+}
+
+#showcase h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+.image-section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Ensures the image covers the entire section */
+    color: #000000; /* Text color for contrast */
+    min-height: 500px;
+    position: relative; /* Relative positioning for content positioning */
+    width: 100%;
+}
+
+.image-section .content {
+    z-index: 1; /* Ensure content is above background */
+    width: 50%; /* Full width of the section */
+    background-color: rgba(255, 255, 255, 0.8); /* Solid color background with transparency */
+    padding: 10px; /* Add padding to create space around the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better separation */
+}
+
+/* Specific background images and text positioning */
+#about {
+    background-image: url('../images/PHR.png');
+    margin-bottom: 200px;
+    background-attachment: fixed;
+    justify-content: flex-start;
+}
+
+#about .content {
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    text-align: left;
+}
+
+#services {
+    background-image: url('../images/PHR2.png');
+    margin-bottom: 200px;
+    background-attachment: fixed;
+    justify-content: flex-end;
+}
+
+#services .content {
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    text-align: right;
+}
+
+#contact {
+    background-image: url('../images/PHR3.png');
+    min-height: 800px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#contact .content {
+    top: 20px; /* Adjust as needed */
+    text-align: center;
+}
+
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+@media(max-width:600px){
+    .image-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+        min-height: 500px; /* Reduce height if needed */
+        background-attachment: scroll; /* Disable parallax effect on small screens */
+    }
+
+    #about .content,
+    #services .content,
+    #contact .content {
+        position: static; /* Reset position to static for better flow on smaller screens */
+        text-align: center; /* Center text for consistency */
+        margin: 0; /* Reset margins */
+    }
+
+    #about, #services, #contact {
+        width: 100%;
+        margin-bottom: 100px; /* Adjust space below sections */
+    }
+
+    #contact .content {
+        transform: none; /* Reset transform for smaller screens */
+        left: 0; /* Adjust position for small screens */
+    }
+
+}
